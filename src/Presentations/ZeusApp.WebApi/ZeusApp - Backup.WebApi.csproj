@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationFile>ZeusApp.WebAPI.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591</NoWarn>
+		<UserSecretsId>6747e48a-c566-4ec7-bf78-d4c122bc6f17</UserSecretsId>
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Library\AspNetCoreHero.Extensions.Logging\AspNetCoreHero.Extensions.Logging.csproj" />
+		<ProjectReference Include="..\..\..\lib\AspNetCoreHero.Results\AspNetCoreHero.Results.csproj" />
+		<ProjectReference Include="..\..\Core\ZeusApp.Application\ZeusApp.Application.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\ZeusApp.Infrastructure.Shared\ZeusApp.Infrastructure.Shared.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\ZeusApp.Infrastructure\ZeusApp.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Log\" />
+	</ItemGroup>
+
+</Project>

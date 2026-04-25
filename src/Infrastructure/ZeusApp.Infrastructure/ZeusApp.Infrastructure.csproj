@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Seeds\**" />
+        <EmbeddedResource Remove="Seeds\**" />
+        <None Remove="Seeds\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MailKit" Version="4.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+        <PackageReference Include="MimeKit" Version="4.1.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\lib\AspNetCoreHero.EntityFrameworkCore.AuditTrail\AspNetCoreHero.EntityFrameworkCore.AuditTrail.csproj" />
+        <ProjectReference Include="..\..\Core\ZeusApp.Application\ZeusApp.Application.csproj" />
+        <ProjectReference Include="..\..\Core\ZeusApp.Application\ZeusApp.Application.csproj" />
+        <ProjectReference Include="..\..\Core\ZeusApp.Domain\ZeusApp.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

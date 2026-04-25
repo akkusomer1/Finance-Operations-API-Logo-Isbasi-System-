@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ZeusApp.Application.DTOs.OtherAddress;
+public class CustomerOtherAddressResponse
+{
+    public int Id { get; set; }
+    /// <summary>
+    /// Adres Başlığı
+    /// </summary>
+    public string AddressTitle { get; set; }
+
+ 
+    /// <summary>
+    /// Adres
+    /// </summary>
+    public string Address { get; set; }
+
+    /// <summary>
+    /// Ülke
+    /// </summary>
+    public string Country { get; set; }
+
+    /// <summary>
+    /// İl
+    /// </summary>
+    public string City { get; set; }
+
+    /// <summary>
+    /// İlçe
+    /// </summary>
+    public string District { get; set; }
+}

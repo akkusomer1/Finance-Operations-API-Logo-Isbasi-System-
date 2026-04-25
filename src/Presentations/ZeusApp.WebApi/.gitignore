@@ -1,0 +1,9 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+appsettings.Development.json
+/appsettings.Development.json
+

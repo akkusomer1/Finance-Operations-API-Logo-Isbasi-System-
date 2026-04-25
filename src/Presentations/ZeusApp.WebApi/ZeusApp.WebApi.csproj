@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DocumentationFile>ZeusApp.WebApi.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Log\**" />
+        <Content Remove="Log\**" />
+        <EmbeddedResource Remove="Log\**" />
+        <None Remove="Log\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.9" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.6.23329.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\lib\AspNetCoreHero.Results\AspNetCoreHero.Results.csproj" />
+        <ProjectReference Include="..\..\Core\ZeusApp.Application\ZeusApp.Application.csproj" />
+        <ProjectReference Include="..\..\Infrastructure\ZeusApp.Infrastructure.Shared\ZeusApp.Infrastructure.Shared.csproj" />
+        <ProjectReference Include="..\..\Infrastructure\ZeusApp.Infrastructure\ZeusApp.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
